@@ -1,19 +1,17 @@
 import "../stylesheet.css";
-import React, { useState, createContext, useContext } from "react";
+import { useContext, useState, React } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { useNavigate } from "react-router-dom";
-import AccountSavedPage from "./AccountSavedPage";
+import { UserContext } from "./UserContext";
 
 const EntryPage = () => {
-  const [data, setData] = useState([]);
+  const { data, setData } = useContext(UserContext);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   let nevigate = useNavigate();
-
-  const CartContext = React.createContext();
 
   const handleClick = () => {
     const newData = {
@@ -22,7 +20,6 @@ const EntryPage = () => {
       id: data.length + 1,
     };
     setData([...data, newData]);
-    console.log(data);
   };
 
   return (

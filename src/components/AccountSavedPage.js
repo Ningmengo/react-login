@@ -1,10 +1,14 @@
-import React from "react";
+import { useContext, React } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "./UserContext";
 
 const AccountSavedPage = () => {
   let nevigate = useNavigate();
+  const { data, setData } = useContext(UserContext);
+  console.log(data);
+
   return (
     <div className="background">
       <div className="container">
