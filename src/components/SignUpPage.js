@@ -5,7 +5,7 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
-const EntryPage = () => {
+const SignUpPage = () => {
   const { data, setData } = useContext(UserContext);
 
   const [username, setUsername] = useState("");
@@ -21,7 +21,6 @@ const EntryPage = () => {
     };
     setData([...data, newData]);
   };
-
   return (
     <div className="background">
       <div className="container">
@@ -55,27 +54,13 @@ const EntryPage = () => {
         </div>
 
         <ButtonGroup aria-label="Basic example" className="extension">
-          <Button
-            variant="secondary"
-            onClick={() => {
-              nevigate("/Sign-up");
-            }}
-          >
-            Sign Up
-          </Button>
+          <Button variant="secondary">Sign Up</Button>
           <Button variant="secondary">Login</Button>
-          <Button
-            variant="secondary"
-            onClick={() => {
-              nevigate("/Saved");
-            }}
-          >
-            Recover Password
-          </Button>
+          <Button variant="secondary">Recover Password</Button>
         </ButtonGroup>
       </div>
     </div>
   );
 };
 
-export default EntryPage;
+export default SignUpPage;
