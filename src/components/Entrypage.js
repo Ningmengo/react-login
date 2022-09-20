@@ -38,7 +38,7 @@ const EntryPage = () => {
         </div>
         <div className="input-container">
           <input
-            placeholder="username"
+            placeholder="username/email"
             className="input-group"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -64,14 +64,7 @@ const EntryPage = () => {
             Sign Up
           </Button>
           <Button variant="secondary">Login</Button>
-          <Button
-            variant="secondary"
-            onClick={() => {
-              nevigate("/Saved");
-            }}
-          >
-            Recover Password
-          </Button>
+          <Button variant="secondary">Recover Password</Button>
         </ButtonGroup>
       </div>
     </div>

@@ -37,7 +37,7 @@ const SignUpPage = () => {
         </div>
         <div className="input-container">
           <input
-            placeholder="username"
+            placeholder="email"
             className="input-group"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -48,14 +48,22 @@ const SignUpPage = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+
           <button className=" button4" onClick={handleClick}>
-            Login
+            Sign up
           </button>
         </div>
 
         <ButtonGroup aria-label="Basic example" className="extension">
           <Button variant="secondary">Sign Up</Button>
-          <Button variant="secondary">Login</Button>
+          <Button
+            variant="secondary"
+            onClick={() => {
+              nevigate("/react-login");
+            }}
+          >
+            Login
+          </Button>
           <Button variant="secondary">Recover Password</Button>
         </ButtonGroup>
       </div>

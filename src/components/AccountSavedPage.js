@@ -19,7 +19,14 @@ const AccountSavedPage = () => {
         </div>
         <div className="whiteboard"></div>
         <ButtonGroup aria-label="Basic example" className="extension-2">
-          <Button variant="secondary">Sign Up</Button>
+          <Button
+            variant="secondary"
+            onClick={() => {
+              nevigate("/Sign-up");
+            }}
+          >
+            Sign Up
+          </Button>
           <Button
             variant="secondary"
             onClick={() => {
