@@ -64,7 +64,12 @@ const EntryPage = () => {
             Sign Up
           </Button>
           <Button variant="secondary">Login</Button>
-          <Button variant="secondary">Recover Password</Button>
+          <Button
+            variant="secondary"
+            onClick={() => nevigate("/RecoverPassword")}
+          >
+            Recover Password
+          </Button>
         </ButtonGroup>
       </div>
     </div>

@@ -7,6 +7,7 @@ import AccountSavedPage from "./components/AccountSavedPage";
 import ErrorPage from "./components/ErrorPage";
 import { UserContext } from "./components/UserContext";
 import SignUpPage from "./components/SignUpPage";
+import RecoverPasswordPage from "./components/RecoverPasswordPage";
 
 function App() {
   const [data, setData] = useState([]);
@@ -19,6 +20,10 @@ function App() {
           <Route path="/Saved" element={<AccountSavedPage />}></Route>
           <Route path="/*" element={<ErrorPage />}></Route>
           <Route path="/Sign-up" element={<SignUpPage />}></Route>
+          <Route
+            path="/RecoverPassword"
+            element={<RecoverPasswordPage />}
+          ></Route>
         </Routes>
       </UserContext.Provider>
     </Router>
