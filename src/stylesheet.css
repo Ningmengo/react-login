@@ -115,3 +115,20 @@
   left: 90px;
   margin-top: 40px;
 }
+
+.dialog {
+  display: flex;
+  width: 300px;
+  border: 2px solid black;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  left: 90px;
+}
+.whiteboard {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  justify-content: flex-start;
+  align-items: center;
+}

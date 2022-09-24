@@ -4,9 +4,10 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
-const AccountSavedPage = () => {
+const AccountSavedPage = ({ SingleData }) => {
   let nevigate = useNavigate();
   const { data, setData } = useContext(UserContext);
+
   console.log(data);
 
   return (
@@ -17,7 +18,17 @@ const AccountSavedPage = () => {
           <Button variant="warning" className="btn-nav"></Button>{" "}
           <Button variant="danger" className="btn-nav"></Button>{" "}
         </div>
-        <div className="whiteboard"></div>
+        <div className="whiteboard">
+          {data.map((item, index) => {
+            const { username, password } = item;
+            return (
+              <div className="dialog" key={index}>
+                <p>{username}</p>
+                <p>{password}</p>
+              </div>
+            );
+          })}
+        </div>
         <ButtonGroup aria-label="Basic example" className="extension-2">
           <Button
             variant="secondary"

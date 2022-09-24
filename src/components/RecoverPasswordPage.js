@@ -49,7 +49,14 @@ const RecoverPasswordPage = () => {
           </div>
 
           <ButtonGroup aria-label="Basic example" className="extension">
-            <Button variant="secondary">Sign Up</Button>
+            <Button
+              variant="secondary"
+              onClick={() => {
+                nevigate("/Sign-up");
+              }}
+            >
+              Sign Up
+            </Button>
             <Button
               variant="secondary"
               onClick={() => {
