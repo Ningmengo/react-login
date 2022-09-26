@@ -1,25 +1,12 @@
 import "../stylesheet.css";
-import { useContext, useState, React } from "react";
+import { React } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "./UserContext";
 
 const RecoverPasswordPage = () => {
-  const { data, setData } = useContext(UserContext);
-
-  const [username, setUsername] = useState("");
-
   let nevigate = useNavigate();
 
-  const handleClick = () => {
-    const newData = {
-      username: username,
-
-      id: data.length + 1,
-    };
-    setData([...data, newData]);
-  };
   return (
     <div>
       <div className="background">
@@ -36,16 +23,9 @@ const RecoverPasswordPage = () => {
             <Button variant="danger" className="btn-nav"></Button>{" "}
           </div>
           <div className="input-container">
-            <input
-              placeholder="email"
-              className="input-group"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
+            <input placeholder="email" className="input-group" />
 
-            <button className=" button4" onClick={handleClick}>
-              Confirm
-            </button>
+            <button className=" button4">Confirm</button>
           </div>
 
           <ButtonGroup aria-label="Basic example" className="extension">
